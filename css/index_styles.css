@@ -196,6 +196,11 @@
     text-align: center;
 }
 
+#footerCompanyReferenceLink > p {
+    text-align: end;
+    margin-right: 10px;
+}
+
 #footerCompanyReferenceLink > a {
     color:cornflowerblue;
     text-decoration: none;
