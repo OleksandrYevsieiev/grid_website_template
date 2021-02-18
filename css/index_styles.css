@@ -14,7 +14,6 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-
 #headerContainer {
     grid-area: headerContainer;
     grid-column: 1 / 3;
@@ -70,7 +69,6 @@
     grid-row: 4 / 5;
 }
 
-
 #whiteStripeContainer > h2,
 #weHandleYourNeedsContainer > h2 {
     padding-top: 60px;
@@ -99,6 +97,7 @@
     background-color: #333;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 .cardContainer {
@@ -106,11 +105,13 @@
     max-width: 400px;
     border-radius: 2%;
     margin: auto;
+    margin: 5px 0 5px 0;
 }
 
 .imageContainer {
     flex: 1;
 }
+
 .cardContainer > .imageContainer > img {
     width: 100%;
     height: 100%;
@@ -207,5 +208,63 @@
     color: #2690d4;
     font-size: 20px;
     padding: 20px 0 20px 0;
+}
 
+@media screen and (max-width: 1215px) {
+
+.cardContainer {
+    max-width: 300px;
+}
+
+}
+
+
+@media screen and (max-width: 920px) {
+
+   #allCardsContainer {
+    grid-template-columns: 1fr;
+}
+
+}
+ 
+@media screen and (max-width: 500px) {
+
+#mainContainer{
+    grid-template-areas: 
+    "headerContainer"
+    "whiteStripeContainer"
+    "allCardsContainer"
+    "weHandleYourNeedsContainer"
+    "legalQuestionBlock"
+    "aboutOurCompanyBlock"
+    "footerCompanyName"
+    "footerCompanyReferenceLink";
+    grid-template-rows: repeat(9, 1fr);
+}
+
+#legalQuestionBlock {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+}
+
+#aboutOurCompanyBlock {
+    grid-row: 6 / 7;
+    grid-column: 1 / 3;
+}
+
+#footerCompanyName{
+    grid-row: 7 / 8;
+    grid-column: 1 / 3;
+}
+
+#footerCompanyReferenceLink{
+    grid-row: 8 / 9;
+    grid-column: 1 / 3;
+}
+}
+
+@media screen and (max-width: 320px) {
+    .cardContainer {
+    max-width: 250px;
+}
 }
